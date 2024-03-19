@@ -1,0 +1,12 @@
+*** vulnerable.c	2023-11-07 19:47:22.000000001 +0000
+--- vulnerableSol.c	2023-11-07 19:52:10.000000001 +0000
+***************
+*** 19,24 ****
+--- 19,25 ----
+  	    while (*from) {
+  	        if (from[0] == '\\' && !isspace((unsigned char)from[1])) {
+  	            from++;
++ 				continue;
+                  }
+  		*to++ = *from++;
+              }

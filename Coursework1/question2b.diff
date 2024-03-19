@@ -1,0 +1,29 @@
+*** vulnerable2.c	2023-09-14 13:42:29.000000001 +0100
+--- vulnerable2Sol.c	2023-11-09 16:52:54.000000001 +0000
+***************
+*** 67,73 ****
+  	do {
+  		sa->Width = tuples[tup].fst;
+  		sa->Height = tuples[tup].snd;
+! 		if (sa->Width < 0 || sa->Height < 0) {
+  			printf("The Width and/or Height of Arrays must be positive!\n");
+  			return;
+  		}
+--- 67,73 ----
+  	do {
+  		sa->Width = tuples[tup].fst;
+  		sa->Height = tuples[tup].snd;
+! 		if (sa->Width <= 0 || sa->Height <= 0) {
+  			printf("The Width and/or Height of Arrays must be positive!\n");
+  			return;
+  		}
+***************
+*** 96,101 ****
+--- 96,102 ----
+  	return;
+  }
+  
++ 
+  int main(int argc, char** argv) {
+  	if (argc % 2 != 1) {
+  		printf("Must have even number of arguments!\n");
